@@ -1,6 +1,6 @@
 <!doctype HTML>
+let meals = [];
 <HTML>
-    let meals = [];
     <BODY>
       <header>
          <h1>Meal Page</h1>
@@ -20,13 +20,12 @@
                <input type="text" id="mealprice" name="mealprice" required>
             </p>
         <p>
-               <label for="restaurant">Type of Meal?</label>
-               <select id="restaurant" name="restaurant" required>
-                  <option value="">Choose one...</option>
-                  <option>Breakfast</option>
-                  <option>Lunch</option>
-                  <option>Dinner</option>
-               </select>
+               <input type="radio" id="breakfast" name="meal-type" value="Breakfast">
+               <label for="breakfast">Breakfast</label><br>
+               <input type="radio" id="lunch" name="meal-type" value="Lunch">
+               <label for="lunch">Lunch</label><br>
+               <input type="radio" id="dinner" name="meal-type" value="Dinner">
+               <label for="dinner">Dinner</label>
             </p>
 
         <button>Submit</button>
