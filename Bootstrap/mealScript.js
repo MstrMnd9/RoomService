@@ -12,6 +12,6 @@ function addMeal () {
   var cell3 = row.insertCell(2);
   cell1.innerHTML = "mealList[0]";
   cell2.innerHTML = "priceList[0]";
-  cell3.innerHTML = "timeList[0];
+  cell3.innerHTML = "timeList[0]";
   
 }
