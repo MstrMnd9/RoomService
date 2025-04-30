@@ -23,20 +23,30 @@
     </p>
     <p>
       <label>Meal Type:</label><br>
-      <input type="radio" name="meal-type" value="Breakfast" required> Breakfast<br>
-      <input type="radio" name="meal-type" value="Lunch"> Lunch<br>
-      <input type="radio" name="meal-type" value="Dinner"> Dinner
+      <input type="radio" id="breakfast" name="meal-type" value="Breakfast" required>
+      <label for="breakfast">Breakfast</label><br>
+
+      <input type="radio" id="lunch" name="meal-type" value="Lunch">
+      <label for="lunch">Lunch</label><br>
+
+      <input type="radio" id="dinner" name="meal-type" value="Dinner">
+      <label for="dinner">Dinner</label>
     </p>
     <button type="submit">Submit New Meal</button>
   </form>
 
   <h2>Meals Available</h2>
+  <button onclick="clearAllMeals()">Clear All Meals</button>
   <table id="meal-table" border="1">
-    <tr>
-      <th>Meal</th>
-      <th>Price</th>
-      <th>Meal Time</th>
-    </tr>
+    <thead>
+      <tr>
+        <th>Meal</th>
+        <th>Price</th>
+        <th>Meal Time</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
   </table>
 
   <script src="mealScript.js"></script>

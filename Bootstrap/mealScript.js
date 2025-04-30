@@ -22,21 +22,45 @@ function addMeal() {
   meals.push(meal);
   localStorage.setItem("meals", JSON.stringify(meals));
 
-  addMealToTable(meal);
+  renderMealTable();
   document.getElementById("meal-form").reset();
   return false;
 }
 
-function addMealToTable(meal) {
-  const table = document.getElementById("meal-table");
-  const row = table.insertRow();
+function renderMealTable() {
+  const tableBody = document.getElementById("meal-table").getElementsByTagName("tbody")[0];
+  tableBody.innerHTML = ""; // Clear existing rows
+  const meals = JSON.parse(localStorage.getItem("meals")) || [];
 
-  row.insertCell(0).textContent = meal.name;
-  row.insertCell(1).textContent = meal.price;
-  row.insertCell(2).textContent = meal.mealType;
+  meals.forEach((meal, index) => {
+    const row = tableBody.insertRow();
+    row.setAttribute("data-index", index);
+    row.insertCell(0).textContent = meal.name;
+    row.insertCell(1).textContent = meal.price;
+    row.insertCell(2).textContent = meal.mealType;
+
+    const actionCell = row.insertCell(3);
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Delete";
+    deleteBtn.onclick = () => deleteMeal(index);
+    actionCell.appendChild(deleteBtn);
+  });
+}
+
+function deleteMeal(index) {
+  let meals = JSON.parse(localStorage.getItem("meals")) || [];
+  meals.splice(index, 1);
+  localStorage.setItem("meals", JSON.stringify(meals));
+  renderMealTable();
+}
+
+function clearAllMeals() {
+  if (confirm("Are you sure you want to delete all meals?")) {
+    localStorage.removeItem("meals");
+    renderMealTable();
+  }
 }
 
 function loadMeals() {
-  const meals = JSON.parse(localStorage.getItem("meals")) || [];
-  meals.forEach(meal => addMealToTable(meal));
+  renderMealTable();
 }
