@@ -1,8 +1,35 @@
 <!doctype HTML>
 <HTML>
+    let meals = [];
     <BODY>
-        This is the meal page!
-        let meals = [];
-        <H6><a HREF="index.html">Back to Home Page</a></H6>
+      <header>
+         <h1>Meal Page</h1>
+         <nav>
+         <H6><a HREF="index.html">Back to Home Page</a></H6>
+         </nav>
+      </header>
+        <H4>Add a new meal option below</H4>
+        <form>
+        <p>
+               <label for="name">Meal Name?</label>
+               <input type="text" id="mealname" name="mealname" required>
+            </p>
+        
+        <p>
+               <label for="name">Price?</label>
+               <input type="text" id="mealprice" name="mealprice" required>
+            </p>
+        <p>
+               <label for="restaurant">Type of Meal?</label>
+               <select id="restaurant" name="restaurant" required>
+                  <option value="">Choose one...</option>
+                  <option>Breakfast</option>
+                  <option>Lunch</option>
+                  <option>Dinner</option>
+               </select>
+            </p>
+
+        <button>Submit</button>
+        </form>
     </BODY>
 </HTML>
