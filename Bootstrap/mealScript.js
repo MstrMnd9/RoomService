@@ -10,8 +10,8 @@ function addMeal () {
   var cell1 = row.insertCell(0);
   var cell2 = row.insertCell(1);
   var cell3 = row.insertCell(2);
-  cell1.innerHTML = "mealList[0]";
-  cell2.innerHTML = "priceList[0]";
-  cell3.innerHTML = "timeList[0]";
+  cell1.innerHTML = ("mealList[0]").value;
+  cell2.innerHTML = ("priceList[0]").value;
+  cell3.innerHTML = ("timeList[0]").value;
   
 }
