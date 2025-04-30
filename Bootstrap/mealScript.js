@@ -1,27 +1,32 @@
-let mealList = [];
-let priceList = [];
-let timeList = [];
-
 function addMeal() {
+  // Get the values from form
   const name = document.getElementById("meal-name").value;
   const price = document.getElementById("meal-price").value;
-  const type = document.getElementById("meal-type").value;
+  const type = document.querySelector('input[name="meal-type"]:checked');
 
-  mealList.push(name);
-  priceList.push(price);
-  timeList.push(type);
+  // Ensure a meal type is selected
+  if (!type) {
+    alert("Please select a meal type.");
+    return false;
+  }
 
+  const mealType = type.value;
+
+  // Add the values to the table
   const table = document.getElementById("meal-table");
-  const row = table.insertRow(-1); // Add to end
+  const newRow = table.insertRow(-1); // Add at the end
 
-  const cell1 = row.insertCell(0);
-  const cell2 = row.insertCell(1);
-  const cell3 = row.insertCell(2);
+  const nameCell = newRow.insertCell(0);
+  const priceCell = newRow.insertCell(1);
+  const typeCell = newRow.insertCell(2);
 
-  cell1.innerHTML = name;
-  cell2.innerHTML = price;
-  cell3.innerHTML = type;
+  nameCell.textContent = name;
+  priceCell.textContent = price;
+  typeCell.textContent = mealType;
 
-  // Optional: reset form fields
+  // Reset the form
   document.getElementById("meal-form").reset();
+
+  // Prevent page reload
+  return false;
 }
