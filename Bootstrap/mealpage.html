@@ -9,7 +9,7 @@
          </nav>
       </header>
         <H4>Add a new meal option below</H4>
-        <form action="https://mstrmnd9.github.io/RoomService/Bootstrap/mealScript.js" method=POST>
+        <form id="meal-form" action="https://mstrmnd9.github.io/RoomService/Bootstrap/mealScript.js" method=POST>
         <p>
                <label for="name">Meal Name: </label>
                <input type="text" id="meal-name" name="meal-name" required>
@@ -29,7 +29,7 @@
                <label for="dinner">Dinner</label>
             </p>
 
-        <input type="button" value="Submit New Meal" onclick="addMeal()" />
+        <input type="submit" value="Submit New Meal" onclick="addMeal()" />
         </form>
 
         <table id="meal-table">
