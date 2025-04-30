@@ -7,37 +7,31 @@
   <header>
     <h1>Meal Page</h1>
     <nav>
-      <h6><a href="https://mstrmnd9.github.io/RoomService/index.html">Back to Home Page</a></h6>
+      <h6><a href="orderpage.html">Go to Order Page</a></h6>
     </nav>
   </header>
 
   <h4>Add a new meal option below</h4>
   <form id="meal-form" onsubmit="return addMeal()">
     <p>
-      <label for="meal-name">Meal Name: </label>
-      <input type="text" id="meal-name" name="meal-name" required>
+      <label for="meal-name">Meal Name:</label>
+      <input type="text" id="meal-name" required>
     </p>
-
     <p>
-      <label for="meal-price">Price: </label>
-      <input type="text" id="meal-price" name="meal-price" required>
+      <label for="meal-price">Price:</label>
+      <input type="text" id="meal-price" required>
     </p>
-
     <p>
-      <label>Meal Type: </label><br>
-      <input type="radio" id="breakfast" name="meal-type" value="Breakfast" required>
-      <label for="breakfast">Breakfast</label><br>
-      <input type="radio" id="lunch" name="meal-type" value="Lunch">
-      <label for="lunch">Lunch</label><br>
-      <input type="radio" id="dinner" name="meal-type" value="Dinner">
-      <label for="dinner">Dinner</label>
+      <label>Meal Type:</label><br>
+      <input type="radio" name="meal-type" value="Breakfast" required> Breakfast<br>
+      <input type="radio" name="meal-type" value="Lunch"> Lunch<br>
+      <input type="radio" name="meal-type" value="Dinner"> Dinner
     </p>
-
     <button type="submit">Submit New Meal</button>
   </form>
 
+  <h2>Meals Available</h2>
   <table id="meal-table" border="1">
-    <caption>Meals Available</caption>
     <tr>
       <th>Meal</th>
       <th>Price</th>
