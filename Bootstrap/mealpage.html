@@ -1,43 +1,51 @@
-<!doctype HTML>
-<HTML>
-    <BODY>
-      <header> 
-        <script src="mealScript.js"></script> 
-        <h1>Meal Page</h1>
-         <nav>
-         <H6><a HREF="https://mstrmnd9.github.io/RoomService/index.html">Back to Home Page</a></H6>
-         </nav>
-      </header>
-        <H4>Add a new meal option below</H4>
-        <form id="meal-form" action="https://mstrmnd9.github.io/RoomService/Bootstrap/mealScript.js" method=POST>
-        <p>
-               <label for="name">Meal Name: </label>
-               <input type="text" id="meal-name" name="meal-name" required>
-            </p>
-        
-        <p>
-               <label for="name">Price: </label>
-               <input type="text" id="meal-price" name="meal-price" required>
-            </p>
-        <p>
-               <label for="type">Meal Type: </label><br>
-               <input type="radio" id="breakfast" name="meal-type" value="Breakfast">
-               <label for="breakfast">Breakfast</label><br>
-               <input type="radio" id="lunch" name="meal-type" value="Lunch">
-               <label for="lunch">Lunch</label><br>
-               <input type="radio" id="dinner" name="meal-type" value="Dinner">
-               <label for="dinner">Dinner</label>
-            </p>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meal Page</title>
+</head>
+<body>
+  <header>
+    <h1>Meal Page</h1>
+    <nav>
+      <h6><a href="https://mstrmnd9.github.io/RoomService/index.html">Back to Home Page</a></h6>
+    </nav>
+  </header>
 
-        <button type="submit" onsubmit="return addMeal()">Submit New Meal</button>
-        </form>
+  <h4>Add a new meal option below</h4>
+  <form id="meal-form" onsubmit="return addMeal()">
+    <p>
+      <label for="meal-name">Meal Name: </label>
+      <input type="text" id="meal-name" name="meal-name" required>
+    </p>
 
-        <table id="meal-table">
-        <caption>Meals Available</caption>
-        <tr>
-          <th>Meal</th>
-          <th>Price</th>
-          <th>Meal Time</th>
-        </tr>
-    </BODY>
-</HTML>
+    <p>
+      <label for="meal-price">Price: </label>
+      <input type="text" id="meal-price" name="meal-price" required>
+    </p>
+
+    <p>
+      <label>Meal Type: </label><br>
+      <input type="radio" id="breakfast" name="meal-type" value="Breakfast">
+      <label for="breakfast">Breakfast</label><br>
+      <input type="radio" id="lunch" name="meal-type" value="Lunch">
+      <label for="lunch">Lunch</label><br>
+      <input type="radio" id="dinner" name="meal-type" value="Dinner">
+      <label for="dinner">Dinner</label>
+    </p>
+
+    <button type="submit">Submit New Meal</button>
+  </form>
+
+  <table id="meal-table" border="1">
+    <caption>Meals Available</caption>
+    <tr>
+      <th>Meal</th>
+      <th>Price</th>
+      <th>Meal Time</th>
+    </tr>
+  </table>
+
+  <!-- ✅ Load JavaScript after the HTML elements -->
+  <script src="mealScript.js"></script>
+</body>
+</html>
