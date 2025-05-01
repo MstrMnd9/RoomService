@@ -7,6 +7,8 @@ function addMeal() {
   const price = document.getElementById("meal-price").value;
   const type = document.querySelector('input[name="meal-type"]:checked');
 
+
+
   if (!type) {
     alert("Please select a meal type.");
     return false;
@@ -21,6 +23,7 @@ function addMeal() {
   let meals = JSON.parse(localStorage.getItem("meals")) || [];
   meals.push(meal);
   localStorage.setItem("meals", JSON.stringify(meals));
+
 
   renderMealTable();
   document.getElementById("meal-form").reset();
@@ -46,7 +49,6 @@ function renderMealTable() {
     actionCell.appendChild(deleteBtn);
   });
 }
-
 function deleteMeal(index) {
   let meals = JSON.parse(localStorage.getItem("meals")) || [];
   meals.splice(index, 1);

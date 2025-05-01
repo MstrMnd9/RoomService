@@ -3,6 +3,7 @@ window.onload = function () {
   loadOrders();
 };
 
+
 function loadMealsToDropdown() {
   const select = document.getElementById("meal");
   const meals = JSON.parse(localStorage.getItem("meals")) || [];
@@ -10,7 +11,7 @@ function loadMealsToDropdown() {
   meals.forEach(meal => {
     const option = document.createElement("option");
     option.value = meal.name;
-    option.textContent = meal.name; // Optional: include price/type in display
+    option.textContent = meal.name;
     select.appendChild(option);
   });
 }
@@ -20,7 +21,6 @@ function submitOrder() {
   const meal = document.getElementById("meal").value;
   const time = document.getElementById("order-time").value;
   const notes = document.getElementById("notes").value;
-
   const newOrder = {
     id: Date.now(),
     room,
@@ -71,10 +71,12 @@ function deleteOrder(orderId) {
   if (row) row.remove();
 }
 
+
 function clearAllOrders() {
   if (confirm("Are you sure you want to delete all orders?")) {
     localStorage.removeItem("orders");
     const tbody = document.getElementById("order-table").getElementsByTagName("tbody")[0];
     tbody.innerHTML = "";
   }
+
 }

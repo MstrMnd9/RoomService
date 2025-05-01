@@ -8,6 +8,7 @@ body {
   }
   
 
+
   header {
     background-color: #ffa500;
     padding: 20px;
@@ -15,7 +16,7 @@ body {
   }
   
   
-  h1, h2, h4 {
+  h1, h2, h3, h4, h5, h6 {
     color: #0a1a2f; 
   }
   
@@ -73,8 +74,3 @@ body {
     background-color: #0a1a2f;
     color: #fdf6e3;
   }
-  
-  tbody tr:nth-child(odd) {
-    background-color: #f7f2e9;
-  }
-  
