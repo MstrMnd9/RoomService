@@ -1,33 +1,22 @@
-/* ===== Base Layout ===== */
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #fdf6e3; /* cream */
-    color: #0a1a2f; /* navy */
+    background-color: #fdf6e3; 
+    color: #0a1a2f; 
     margin: 0;
-    padding: 20px;
     line-height: 1.6;
   }
   
-  /* ===== Headers & Navigation ===== */
+
   header {
-    background-color: #0a1a2f; /* navy */
-    color: #fdf6e3; /* cream */
+    background-color: #ffa500;
     padding: 20px;
     text-align: center;
   }
   
-  header a {
-    color: #ffa500; /* orange */
-    text-decoration: none;
-  }
-  
-  header a:hover {
-    text-decoration: underline;
-  }
   
   h1, h2, h4 {
-    margin-top: 0;
-    color: #0a1a2f;
+    color: #0a1a2f; 
   }
   
   /* ===== Forms ===== */
@@ -39,12 +28,7 @@ body {
     border-radius: 8px;
     max-width: 600px;
   }
-  
-  label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-  }
+
   
   input[type="text"],
   input[type="number"],
@@ -52,7 +36,6 @@ body {
   select,
   textarea {
     width: 100%;
-    padding: 8px;
     margin-bottom: 15px;
     border: 1px solid #0a1a2f;
     border-radius: 4px;
@@ -60,12 +43,8 @@ body {
     color: #0a1a2f;
   }
   
-  input[type="radio"] {
-    margin-right: 6px;
-  }
-  
   button {
-    background-color: #ffa500; /* orange */
+    background-color: #ffa500;
     color: #0a1a2f;
     border: none;
     padding: 10px 16px;
@@ -75,9 +54,6 @@ body {
     margin-top: 10px;
   }
   
-  button:hover {
-    background-color: #e69500; /* darker orange */
-  }
   
   /* ===== Tables ===== */
   table {
@@ -102,11 +78,3 @@ body {
     background-color: #f7f2e9;
   }
   
-  /* ===== Accessibility: Focus States ===== */
-  input:focus,
-  select:focus,
-  textarea:focus,
-  button:focus {
-    outline: 3px solid #ffa500;
-    outline-offset: 2px;
-  }
